@@ -1,10 +1,5 @@
--- Import and require express and mysql2
-const express = require('express' )
-const mysql = require('mysql2');
+--  Employee Database
+DROP DATABASE IF EXISTS employee_db;
+CREATE DATABASE employee_db;
 
--- Write middlware
-
-app.use(express.urlencoded({ extended: false }));
--- Using JSON data
-app.use(express.json());
-
+USE employee_db;
