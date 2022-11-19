@@ -8,7 +8,7 @@ VALUES
        (006, "Human Resources")
      
        
-INSERT INTO ROLE_INFO (role_id, dept_name, salary)
+INSERT INTO ROLE_INFO (role_id, job_title, dept_name, salary)
 VALUES 
        (001, "Audio Engineer", "Engineering", $60,000),
        (002, "Accounts Administrator", "Finance",  $52,275),
