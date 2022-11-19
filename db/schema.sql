@@ -13,26 +13,23 @@ CREATE TABLE dept_info (
 
 
 -- CREATE TABLE ROLE_INFO (
+  -- job title, role id, the department that role belongs to, and the salary for that role
 CREATE TABLE role_info (
-  dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  dept_name VARCHAR(30) NOT NULL
+  role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   job_title VARCHAR(30) NOT NULL,
+   dept_name VARCHAR(30) NOT NULL,
+   salary INT NOT NULL
 );
 -- )
+
+--  including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
+
 -- CREATE TABLE EMPLOYEE_INFO (
- CREATE TABLE employee_info (
-  dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  dept_name VARCHAR(30) NOT NULL
-);
+
 -- )
+-- employee’s first name, last name, role, and manager
 -- CREATE TABLE ADD_EMPLOYEE (
-  CREATE TABLE add_employee (
-  dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  dept_name VARCHAR(30) NOT NULL
-);
--- )
--- CREATE TABLE EDIT_EMPLOYEE (
- CREATE TABLE update_employee (
-  dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  dept_name VARCHAR(30) NOT NULL
-);
--- )
+--   CREATE TABLE add_employee (
+--   dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   dept_name VARCHAR(30) NOT NULL
+-- );
