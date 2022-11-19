@@ -1,5 +1,6 @@
 //Require insomnia package
 const inquirer = require("inquirer");
+require("console.table");
 
 inquirer
   .prompt([

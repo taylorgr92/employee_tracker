@@ -1,29 +1,24 @@
-DROP DATABASE IF EXISTS employees_db;
-CREATE DATABASE employees_db;
+DROP DATABASE IF EXISTS EMPLOYEES_DB;
 
-USE employees_db;
+CREATE DATABASE EMPLOYEES_DB;
 
+USE EMPLOYEES_DB;
 
-
-CREATE TABLE dept_info (
-  dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  dept_name VARCHAR(30) NOT NULL
+CREATE TABLE DEPARTMENT (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  NAME VARCHAR(30) NOT NULL PRIMARY KEY (ID)
 );
 
-
-
-
-CREATE TABLE role_info (
-  role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   job_title VARCHAR(30) NOT NULL,
-   dept_name VARCHAR(30) NOT NULL,
-   salary VARCHAR(30) NOT NULL,
+CREATE TABLE ROLE(
+  ID INT NOT NULL AUTO_INCREMENT,
+  TITLE VARCHAR(30) NOT NULL,
+  SALARY DECIMAL(10, 3) NULL,
+  DEPARTMENT_ID INT NULL
 );
-
 
 --  including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
 
--- CREATE TABLE EMPLOYEE_INFO (
+-- CREATE TABLE EMPLOYEE (
 
 -- )
 -- employee’s first name, last name, role, and manager
