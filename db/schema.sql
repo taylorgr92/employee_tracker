@@ -12,15 +12,14 @@ CREATE TABLE dept_info (
 
 
 
--- CREATE TABLE ROLE_INFO (
-  -- job title, role id, the department that role belongs to, and the salary for that role
+
 CREATE TABLE role_info (
   role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    job_title VARCHAR(30) NOT NULL,
    dept_name VARCHAR(30) NOT NULL,
-   salary INT NOT NULL
+   salary VARCHAR(30) NOT NULL,
 );
--- )
+
 
 --  including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
 
