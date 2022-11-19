@@ -1,10 +1,10 @@
-INSERT INTO dept_info (dept_id, dep_name)
+INSERT INTO DEPT_INFO (id, dept_name)
 VALUES 
-       (1, "Engineering"),
-       (2, "Finance"),
-       (3, "Legal Services"),
-       (4, "Sales"),
-       (5, "Shenanigans"),
-       (6, "Engineering"),
+       (001, "Engineering"),
+       (002, "Finance"),
+       (003, "Legal Services"),
+       (004, "Sales"),
+       (005, "Shenanigans"),
+       (006, "Engineering")
      
        

@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.2.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +20,5 @@
   "bugs": {
     "url": "https://github.com/taylorgr92/employee_tracker/issues"
   },
-  "homepage": "https://github.com/taylorgr92/employee_tracker#readme",
-  "dependencies": {
-    "express": "^4.18.2",
-    "inquirer": "^8.2.4",
-    "mysql2": "^2.3.3"
-  }
+  "homepage": "https://github.com/taylorgr92/employee_tracker#readme"
 }
