@@ -1,3 +1,4 @@
+        -- Department table
 INSERT INTO department (id, name)
 VALUES 
        (001, "Engineering"),
@@ -7,7 +8,7 @@ VALUES
        (005, "Shenanigans"),
        (006, "Human Resources");
      
-       
+       -- Role table
 INSERT INTO role (id,title, salary, department_id)
 VALUES 
        (001, "Audio Engineer", 60000, 001),
@@ -17,14 +18,7 @@ VALUES
        (005, "Court Jester", 90000, 005),
        (006, "Benefits Manager", 130000, 006);
      
-     INSERT INTO role (id,title, salary, department_id)
-VALUES 
-       (001, "Audio Engineer", 60000, 001),
-       (002, "Accounts Administrator",52275, 002),
-       (003, "Paralegal",  78478, 003),
-       (004, "Digital Assistant", 62289, 004),
-       (005, "Court Jester", 90000, 005),
-       (006, "Benefits Manager", 130000, 006);
+-- Employee table
 
        INSERT INTO employee (id,first_name, last_name, role_id, manager_id )
 VALUES 
