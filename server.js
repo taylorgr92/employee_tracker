@@ -22,7 +22,7 @@ const db = mysql.createConnection(
   console.log(`Connected to the employees_db database.`)
 );
 
-db.query('SELECT * FROM dept_info', function (err, results) {
+db.query('SELECT * FROM ROLE', function (err, results) {
   console.log(results);
 });
 

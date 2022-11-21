@@ -20,12 +20,24 @@ inquirer
   .then(function ({ task }) {
     switch (task) {
       case "View all departments":
-        viewDepartments;
+        viewDepartments();
+        break;
       case "View all employees":
-        viewEmployees;
+        viewEmployees();
+        break;
       case "Add a role":
-        addRole;
+        addRole();
+        break;
       case "Update employee role":
-        updateRole;
+        updateRole();
+        break;
     }
   });
+
+//  View all departments function
+function viewDepartments() {
+
+
+
+
+}
