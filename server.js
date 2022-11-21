@@ -4,31 +4,28 @@ const mysql = require("mysql2");
 const inquirer = require("inquirer");
 require("console.table");
 
-const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const db = mysql.createConnection(
+const connection = mysql.createConnection(
   {
     host: "localhost",
     // MySQL username,
     user: "root",
     // TODO: Add MySQL password
-    password: "",
+    password: "Forest#246",
     database: "employees_db",
   },
   console.log(`Connected to the employees_db database.`)
 );
-connection.connect(function (err) {
+
+db.connection(function (err) {
   if (err) throw err;
-
-  initialPrompt();
 });
-
-
+module.exports = connection; 
 function initialPrompt() {
   inquirer
     .prompt([
@@ -66,4 +63,17 @@ function initialPrompt() {
       }
     });
 }
+// View all departments
 
+function viewDepartments() {
+  const queryDepartments = `SELECT ID , name FROM department`;
+
+  db.queryDepartments(queryDepartments, function (err, res) {
+    if (err) throw err;
+    //Printing department reponse data to console table
+    console.table(res);
+    console.log("Departments viewed!\n");
+
+    initialPrompt();
+  });
+}
