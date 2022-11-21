@@ -1,6 +1,7 @@
 const express = require("express");
 // Import and require mysql2
 const mysql = require("mysql2");
+const inquirer = require("inquirer");
 require("console.table");
 
 const PORT = process.env.PORT || 3001;
@@ -21,16 +22,48 @@ const db = mysql.createConnection(
   },
   console.log(`Connected to the employees_db database.`)
 );
+connection.connect(function (err) {
+  if (err) throw err;
 
-db.query('SELECT * FROM ROLE', function (err, results) {
-  console.log(results);
+  initialPrompt();
 });
 
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+function initialPrompt() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "view_choices",
+        message: "What would you like to do?",
+        choices: [
+          "View all departments",
+          "View all employees",
+          "Add a role",
+          "Update employee role",
+        ],
+      },
+    ])
+
+    //Switch function to cycle through prompts
+    .then(function ({ task }) {
+      switch (task) {
+        case "View all departments":
+          viewDepartments();
+          break;
+        case "View all employees":
+          viewEmployees();
+          break;
+        case "Add a role":
+          addRole();
+          break;
+        case "Update employee role":
+          updateRole();
+          break;
+        case "End":
+          connection.end();
+          break;
+      }
+    });
+}
+
